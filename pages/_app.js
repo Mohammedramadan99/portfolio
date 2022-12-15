@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 import { Provider, useSelector} from "react-redux";
 import { wrapper } from "../store/store";
 import { useRouter } from "next/router";
-import "../styles/style.scss";
+import "../styles/style.css";
 import Layout from "../components/Layout/Layout";
 const App = ({ Component, ...rest}) =>
 {
