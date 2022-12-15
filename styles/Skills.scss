@@ -5,7 +5,6 @@
         @extend %headerHover;
     }
 
-    .container {}
 
     &_items {
         @include grid(150px);

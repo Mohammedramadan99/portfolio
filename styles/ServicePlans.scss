@@ -1,5 +1,5 @@
-@import './vars.scss';
-@import './PlaceHolders.scss';
+@import 'vars.scss';
+@import 'PlaceHolders.scss';
 
 .services {
     @extend %sectionStyle;
@@ -7,9 +7,6 @@
     &:hover {
         @extend %headerHover;
     }
-
-    .section-header {}
-
     .plans {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
