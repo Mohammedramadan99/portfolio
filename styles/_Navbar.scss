@@ -1,0 +1,95 @@
+@import './VARS';
+
+.navbar {
+    min-height: $nav_height;
+    box-shadow: $main_shdw;
+    background-color: $light_bg;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: $nav_height;
+
+        @media (max-width:768px) {
+            flex-direction: column;
+
+            .logo {
+                a {
+                    font-size: 25px;
+                }
+            }
+
+            .links {
+                height: auto;
+                display: flex;
+                flex-wrap: wrap;
+
+                li {
+                    height: auto !important;
+                    margin: 10px 20px;
+                    cursor: pointer;
+
+                    a {
+                        height: auto !important;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+
+        .links {
+            display: flex;
+            justify-content: space-between;
+            text-transform: capitalize;
+            flex: 5;
+            height: $nav_height;
+
+            li {
+                cursor: pointer;
+
+                &:hover {
+                    a {
+                        color: $secondary_color;
+                    }
+                }
+
+                &:focus {
+                    color: $secondary_color;
+                }
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    height: $nav_height;
+                    color: $gray_light_color;
+                    transition: $main_transition_duration;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .userInfo {
+            padding: 0 40px;
+            margin-right: 40px;
+            color: $gray_light_color;
+            text-transform: capitalize;
+
+            border-top-left-radius: 30%;
+            border-top-right-radius: 30%;
+            cursor: pointer;
+            text-align: center;
+
+            &>div {
+                font-weight: 600;
+                color: $secondary_color;
+            }
+
+        }
+    }
+}

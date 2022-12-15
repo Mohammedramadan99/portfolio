@@ -1,0 +1,19 @@
+.skills {
+    @extend %sectionStyle;
+
+    &:hover {
+        @extend %headerHover;
+    }
+
+    .container {}
+
+    &_items {
+        @include grid(150px);
+        justify-items: center;
+
+        svg {
+            font-size: 150px;
+            color: $secondary_color;
+        }
+    }
+}

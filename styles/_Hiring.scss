@@ -1,0 +1,133 @@
+.order {
+    @extend %sectionStyle;
+
+    position: relative;
+    color: #fff;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: .8;
+        background-size: cover;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
+
+    .container {
+
+        @media (max-width: 768px) {
+            .info {
+                margin: 0 !important;
+
+                h1 {
+                    font-size: 20px !important;
+                    text-align: center !important;
+                }
+
+                .countdown {
+                    .count {
+                        font-size: 20px !important;
+                        min-width: 80px !important;
+                        padding: 15px;
+                    }
+
+                    .txt {
+                        font-size: 20px !important;
+                    }
+                }
+            }
+        }
+
+        .form {
+
+            .head {
+                padding: 30px;
+                text-align: center;
+                text-transform: capitalize;
+                font-size: 30px;
+
+                span {
+                    color: $secondary_color;
+                }
+            }
+
+            form {
+                padding: 30px;
+                max-width: 600px;
+                margin: 0 auto;
+
+                .formAlert {
+                    padding: 10px;
+                    &.success{
+                        background-color: rgba(#07a307, .7);
+                        color: #fff;
+                    }
+                    &.error{
+                        background-color: rgba($alert_color, .7);
+                    }
+                }
+
+                .row {
+                    width: 100%;
+                    @include flex($justify: space-between)
+                }
+
+                .form-group {
+                    width: 100%;
+                    text-align: center;
+                }
+
+                div {
+                    margin: 20px 0;
+                    width: 100%;
+
+                    input,
+                    textarea {
+                        width: 100%;
+                        padding: 10px 20px;
+                        background-color: transparent;
+                        border: 1px solid #eeee;
+                        color: #fff;
+                        font-size: 20px;
+                        outline: 2px solid transparent;
+                        transition: $normal_transition;
+
+                        &:focus {
+                            border-color: transparent;
+                            outline-color: $secondary_color;
+                        }
+
+                        &::placeholder {
+                            color: rgba(#e6e6e6, .9);
+
+                        }
+                    }
+                }
+
+                .submit {
+                    width: 120px;
+                    margin: 0 auto;
+                    color: #fff;
+                    font-weight: 400;
+                    font-size: 18px;
+                    background-color: transparent;
+                    border: 1px solid $secondary_color;
+                    border-radius: 20px;
+                    text-transform: capitalize;
+                    padding: 10px;
+                    transition: $speed_transition;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: $secondary_color;
+                    }
+                }
+            }
+        }
+    }
+}
