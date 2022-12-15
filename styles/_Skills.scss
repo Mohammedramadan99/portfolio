@@ -7,7 +7,7 @@
 
 
     &_items {
-        @include grid(150px);
+        @include grid(150);
         justify-items: center;
 
         svg {
