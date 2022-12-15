@@ -10,6 +10,7 @@ import responsive from '../images/responsive-4.png'
 import performance from '../images/performance-1.png'
 import quality from '../images/quality_1.png'
 import secure from '../images/secure_3.png'
+import Image from 'next/image'
 
 export default function Whyme()
 {
@@ -43,7 +44,7 @@ export default function Whyme()
         setDirection(direc)
     }
 
-    const productFeats = [
+    const [productFeats, setProductFeats] = useState([
         {
             num: "performance",
             title: 'high performance',
@@ -58,19 +59,10 @@ export default function Whyme()
             title: "secure",
             element:
                 <div className="feat__desc">
-                    <p> website's system will be secure </p>
+                    <p> system of the website will be secure </p>
                 </div>,
             icon: secure
         },
-        // {
-        //     num: "speed",
-        //     title: 'speed',
-        //     element:
-        //         <div className="feat__desc">
-        //             <p>  </p>
-        //         </div>,
-        //     icon: quality
-        // },
         {
             num: "responsive",
             title: 'responsive design',
@@ -80,13 +72,13 @@ export default function Whyme()
                 </div>,
             icon: responsive
         },
-    ]
+    ])
     useEffect(() =>
     {
-        setActiveFeat(productFeats.filter(p => (
+        setActiveFeat(productFeats?.filter(p => (
             p.num !== activeList
         )))
-    }, [activeList])
+    }, [productFeats,activeList])
 
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
@@ -99,9 +91,9 @@ export default function Whyme()
         <section className="why-me" id="about">
             <div className="container" >
                 <div className="features">
-                    {productFeats.map(feat => (
-                        <div className="feat">
-                            <div className="feat__icon"> <img src={feat.icon} alt="" /> </div>
+                    {productFeats.map((feat,i) => (
+                        <div key={i} className="feat">
+                            <div className="feat__icon"> <Image src={feat.icon} alt="img" /> </div>
                             <div className="feat__name" data-aos="fade-left"> {feat.title} </div>
                             <div className="feat__desc" data-aos="fade-right">
                                 {feat.element}

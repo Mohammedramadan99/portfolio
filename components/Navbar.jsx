@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 // import { logout } from '../Redux/auth/authSlice'
 
 export default function Navbar()
-{
+{ 
     const dispatch = useDispatch()
 
     const signOutHandler = () =>

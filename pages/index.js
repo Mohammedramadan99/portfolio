@@ -25,8 +25,6 @@ export default function Home()
   return (
     <div id="home">
       <Banner />
-      {/* <Whyme /> */}
-      {/* <Favorites /> */}
       <AboutMe />
       <Skills />
       <WorkPlans serviceType={serviceType} setServiceType={setServiceType} />

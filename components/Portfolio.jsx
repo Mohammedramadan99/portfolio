@@ -35,7 +35,7 @@ export default function Portfolio()
                                     {p?.name}
                                 </div>
                                 <div className="techs">
-                                    {p?.techs?.map(tech => <div className='item'> {tech} </div>)}
+                                    {p?.techs?.map((tech,i) => <div key={i}  className='item'> {tech} </div>)}
                                 </div>
                                 <Link href={p?.websiteLink} className="btn" style={{ cursor: "pointer" }}> visit website </Link>
                             </div>
