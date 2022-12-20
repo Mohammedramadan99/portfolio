@@ -43,7 +43,7 @@
             }
 
             .box {
-                position: relative;
+                position: relative; 
                 color: $gray_light_color;
                 margin: 0 10px;
                 max-width: 100%;
@@ -57,7 +57,7 @@
                         visibility: visible;
                     }
                     .img{
-                        img{
+                        img{ 
                             transform: translateY(-85%);
                         }
                     }
@@ -117,21 +117,29 @@
                         }
                     }
                 }
-
-                .img {
+                
+                .img,.normal {
                     width: 100%;
                     height: 300px;
                     transition: $speed_transition;
                     border-radius: 20px;
                     overflow: hidden;
-
                     img {
                         width: 100%;
-                        height: 2000px !important;
                         object-fit: cover;
                         transition: 8s cubic-bezier(0, 0, .2, .5);
                         transform: translateY(0);
                         top: 0 !important;
+                    }
+                }
+                .img{
+                    img{
+                        height: 2000px !important;
+                    }
+                }
+                .normal {
+                    img {
+                        height: 100% !important;
                     }
                 }
 

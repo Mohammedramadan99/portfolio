@@ -39,8 +39,8 @@ export default function Portfolio()
                                 </div>
                                 <Link href={p?.websiteLink} className="btn" style={{ cursor: "pointer" }}> visit website </Link>
                             </div>
-                            <div className="img" style={{position:"relative"}}>
-                                <Image src={p?.images[0]?.url} fill={true} alt="img" />
+                            <div className={p?.category == "social media" ? "normal" : "img"} style={{position:"relative"}}>
+                                <Image src={p?.images[0]?.url} fill={true} alt="img"  />
                             </div>
                         </Link>
                     ))}
