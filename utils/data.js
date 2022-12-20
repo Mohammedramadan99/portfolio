@@ -10,7 +10,7 @@
 // import portf2 from "./images/portfolioImg-2.png";
 // import portf3 from "./images/portfolioImg-3.png";
 // import portf4 from "./images/portfolioImg-4.png";
-
+import nextjs from '../public/images/nextjs.svg'
 import {
   DiMongodb,
   DiNodejsSmall,
@@ -101,14 +101,52 @@ const data = {
   //   },
   // ],
   myskills: [
-    <AiFillHtml5 />,
-    <CssOutlined />,
-    <DiSass />,
-    <DiJavascript1 />,
-    <DiReact />,
-    <DiNodejsSmall />,
-    <DiMongodb />,
-    <AiFillGithub />,
+    {
+      key: Math.floor(Math.random() * 100) + 1,
+      type:"icon",
+      icon: <AiFillHtml5 />
+    },
+    {
+      key: Math.floor(Math.random() * 100) + 1,
+      type:"icon",
+      icon: <CssOutlined />
+    },
+    {
+      key: Math.floor(Math.random() * 100) + 1,
+      type:"icon",
+      icon: <DiSass />
+    },
+    {
+      key: Math.floor(Math.random() * 100) + 1,
+      type:"icon",
+      icon: <DiJavascript1 />
+    },
+    {
+      key: Math.floor(Math.random() * 100) + 1,
+      type:"icon",
+      icon: <DiReact />
+    },
+    {
+      key: Math.floor(Math.random() * 100) + 1,
+      type:"img",
+      img: nextjs
+    },
+    {
+      key: Math.floor(Math.random() * 100) + 1,
+      type:"icon",
+      icon: <DiNodejsSmall />
+    },
+    {
+      key: Math.floor(Math.random() * 100) + 1,
+      type:"icon",
+      icon: <DiMongodb />
+    },
+    {
+      key: Math.floor(Math.random() * 100) + 1,
+      type:"icon",
+      icon: <AiFillGithub />
+    },
+
   ],
   favoritesData: [
     {

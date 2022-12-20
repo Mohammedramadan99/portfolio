@@ -4,6 +4,7 @@ import data from '../utils/data'
 import webDesign from '../public/images/develop-2.svg'
 import { GitHub, LinkedIn } from '@mui/icons-material'
 import Image from 'next/image'
+import Link from 'next/link'
 export default function Banner()
 {
     const [bannerData, setBannerData] = useState(data.bannerData)
@@ -37,9 +38,9 @@ export default function Banner()
                         download resume
                     </div>
                     <div className="links">
-                        <div className="link">
+                        <Link href="https://github.com/Mohammedramadan99" className="link" style={{color:"#fff"}}>
                             <GitHub />
-                        </div>
+                        </Link>
                         <div className="link">
                             <LinkedIn />
                         </div>
